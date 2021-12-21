@@ -8,4 +8,4 @@ Reference: https://www.thepythoncode.com/article/make-url-shortener-in-python
 
 If you are looking to run this code, you have to create a python file that has your credentials for your Bitly account. 
 
-## Example of code working: 
+## Example of code working: ![screenshot](example.png)
