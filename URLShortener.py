@@ -29,3 +29,13 @@ if groups_res.status_code == 200:
 else:
     print("[!] ERROR! Cannot get GUID. Process cancelled. [!]")
     exit()
+
+# Input the URL you would like to shorten
+url = "https://www.thepythoncode.com/article/make-url-shortener-in-python"
+
+# POST Request to obtain shortened URL
+shorten_res = requests.post("https://api-ssl.bitly.com/v4/shorten", json={"group_guid": guid, "long_url": url}, headers=headers)
+if shorten_res.status_code == 200:
+    # If response is OK, get shortened URL
+    link = shorten_res.json().get("link")
+    print("Shortened URL: ", link)
